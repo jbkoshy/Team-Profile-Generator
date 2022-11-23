@@ -1,17 +1,33 @@
-const Intern = require("../lib/Intern");
+const Intern = require ('../lib/Intern');
 
-test("Can the constructor's argument set the name of the school", () => {
-    const testValue = "UT"
-    const intern = new Engineer("Cena", 1 , "cena@email.com", testValue);
-    expect(intern.school).toBe(testValue);
-});
-test(`getRole() should return ${'Intern'}`, () => {
-    const testValue = "Intern"
-    const obj = new Intern("Cena", 1 , "cena@email.com", "UT");
-    expect(obj.getRole()).toBe(testValue);
-});
-test("Can the name of the school be retrieved from getSchool()", () => {
-    const testValue = "UH"
-    const obj = new Intern("Cena", 1 , "cena@email.com", testValue);
-    expect(obj.getSchool()).toBe(testValue);
+describe("Intern", () => {
+    it("Will the name be returned", () => {
+        const obj = new Intern("Alan", "2", "alan@gmail.com", "University of Texas");
+        const testName = obj.getName();
+        expect(testName).toBe("Alan")
+    });
+
+    it("Will the ID be returned", () => {
+        const obj = new Intern("Alan", "2", "alan@gmail.com", "University of Texas");
+        const testId = obj.getId();
+        expect(testId).toBe("2")
+    });
+
+    it("Will the email be returned", () => {
+        const obj = new Intern("Alan", "2", "alan@gmail.com", "University of Texas");
+        const testEmail = obj.getEmail();
+        expect(testEmail).toBe("alan@gmail.com")
+    });
+
+    it("Will the name of the school be returned", () => {
+        const obj = new Intern("Alan", "2", "alan@gmail.com", "University of Texas");
+        const testSchool = obj.getSchool();
+        expect(testSchool).toBe("University of Texas")
+    });
+
+    it("Will the roles be returned", () => {
+        const obj = new Intern("Alan", "2", "alan@gmail.com", "University of Texas");
+        const testRole = obj.getRole();
+        expect(testRole).toBe("Intern")
+    });
 });

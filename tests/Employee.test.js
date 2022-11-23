@@ -1,51 +1,26 @@
-const Employee = require('../lib/Employee');
+const Employee = require ('../lib/Employee');
 
 describe("Employee", () => {
-    it("Can Employee argument be initialized", () => {
-        const obj = new Employee();
-        expect(typeof(obj)).toBe("object");
+    it("Will the name be returned", () => {
+        const obj = new Employee("Alan", "2", "alan@gmail.com");
+        const testName = obj.getName();
+        expect(testName).toBe("Alan")
     });
-    it("Can the constructor's argument set the name", () => {
-        const name = "Babu";
-        const obj = new Employee(name);
-        expect(obj.name).toBe(name);
+
+    it("Will the ID be returned", () => {
+        const obj = new Employee("Alan", "2", "alan@gmail.com");
+        const testId = obj.getId();
+        expect(testId).toBe("2")
     });
-    it("Can the constructor's argument set the id", () => {
-        const testValue = 1998;
-        const obj = new Employee("Babu", testValue);
-        expect(obj.id).toBe(testValue);
+
+    it("Will the email be returned", () => {
+        const obj = new Employee("Alan", "2", "alan@gmail.com");
+        const testEmail = obj.getEmail();
+        expect(testEmail).toBe("alan@gmail.com")
     });
-    it("Can the constructor's argument set the email", () => {
-        const testValue = "koshy@gmail.com";
-        const obj = new Employee("Babu", 1, testValue);
-        expect(obj.email).toBe(testValue);
+    it("Will the roles be returned", () => {
+        const obj = new Employee("Alan", "2", "alan@gmail.com");
+        const testRole = obj.getRole();
+        expect(testRole).toBe("Employee")
     });
-    describe ("getName", () => { 
-        it("Can name be retrieved from getName()", () => {
-            const testValue = "Babu";
-            const obj = new Employee(testValue);
-            expect(obj.getName()).toBe(testValue);
-        });
-    });
-    describe ("getId", () => { 
-        it("Can Id be retrieved from getId()", () => {
-            const testValue = 2022;
-            const obj = new Employee("Babu", testValue);
-            expect(obj.getId()).toBe(testValue);
-        });
-    });
-    describe ("getEmail", () => { 
-        it("Can Email be retrieved from getEmail()", () => {
-            const testValue = "koshyjeremy@gmail.com";
-            const obj = new Employee("Babu", 1, testValue);
-            expect(obj.getemail()).toBe(testValue);
-        });
-    });
-    describe ("getRole", () => { 
-        it(`getRole() should return ${'Employee'}`, () => {
-            const testValue = "Employee";
-            const obj = new Employee("Babu", 1, "koshyjeremy@gmail.com");
-            expect(obj.getRole()).toBe(testValue);
-        });
-    });     
 });

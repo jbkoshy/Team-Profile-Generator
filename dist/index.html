@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,33 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Profile</title>
-    <link rel="stylesheet" type="text/css" href=".style/css"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRe3js3W69CrMinNGtLdWyYrnnKzHR26vu4tDT5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<main>
-
-    <div class="card">
+    <header>
+        <nav class="navbar" id="navbar">
+            <span class="navbar-brand mb-0 h1 w-100 textcenter" id="navbar-text">The Dream Team</span>
+        </nav>
+    </header>
+    <main>
         <div class="container">
-            <h4 class="title"><b></b></h4>
-            <h4 class="title"><b>Manager</b></h4>
-            <ul>
-                <li>ID: 205</li>
-                <li>Email:<a href="mailto: jose@gmail.com">jose@gmail.com</a></li>
-                <li>Office Number: 12345</li>
-            </ul>
+            <div class="row justify-content-center" id="team-cards">
+                
+    <div class="col-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>Jeremy</h3>
+                <i class="material-icons">Manages Accounts</i><h4>Manager</h4>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: 223</p>
+                <p class="email">Email: <a href="mailto:john@gmail.com">john@gmail.com</a></p>
+                <p class="office">Office Number: 223</p>
+            </div>
         </div>
-    </div><div class="card">
-    <div class="container">
-        <h4 class="title"><b>Ben</b></h4>
-        <h4 class="title"><b>Engineer</b></h4>
-        <ul>
-            <li>Id: 405</li>
-            <li>Email:<a href="mailto: 405">405</a></li>
-            <li>Github: <a href="https://www.github.com/405">405</a></li>
-        </ul>
     </div>
-</div></main>
     
-</body>
+    <div class="col-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>john</h3>
+                <i class="material-icons">Works under supervision</i><h4>Engineer</h4>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: 224</p>
+                <p class="email">Email: <a href="mailto:john@gmail.com">john@gmail.com</a></p>
+                <p class="school">School: UT</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>Jonah</h3>
+                <i class="material-icons">Designs and Builds</i><h4>Engineer</h4>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: 334</p>
+                <p class="email">Email: <a href="mailto:Jonah@gmail.com">Jonah@gmail.com</a></p>
+                <p class="github">GitHub:<a href="https://github.com/jonahrocks123">jonahrocks123</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>Monkey</h3>
+                <i class="material-icons">Works under supervision</i><h4>Intern</h4>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: 225</p>
+                <p class="email">Email: <a href="mailto:monkey@gmail.com">monkey@gmail.com</a></p>
+                <p class="school">School: UH</p>
+            </div>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+    </main>
+</body>            
 </html>

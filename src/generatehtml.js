@@ -56,49 +56,66 @@ const generateIntern = function (intern) {
     </div>
     `;
 };
-
-pageArray = [];
-
 generateHTML = (data) => {
+    pageArray = [];
 
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i< data.length; i++) {
         const employee = data[i];
         const role = employee.getRole();
 
         if (role === 'Manager') {
-            const manCard = generateManager(employee);
-            
-            pageArray.push(manCard);
+            const managerCard = generateManager(employee);
+
+            pageArray.push(managerCard);
         }
         if (role === 'Engineer') {
-            const engCard = generateEngineer(employee);
-            
-            pageArray.push(engCard);
+            const engineerCard = generateEngineer(employee);
+
+            pageArray.push(engineerCard);
+        }
+        if (role === 'Intern') {
+            const internCard = generateIntern(employee);
+
+            pageArray.push(internCard);
         }
     }
-    if (role === 'Intern') {
-        const intCard = generateIntern(employee);
-        
-        pageArray.push(intCard);
-    }
+
+    const employeeCards = pageArray.join('')
+
+    const generateTeam = generateTeamPage(employeeCards);
+    return generateTeam;
 };
 
-const employeeCards = pageArray.join('')
-
-const generateGroup = generateTeampage(employeeCards);
-return generateGroup;
-
-const generateTeampage = function (employeeCards) {
-    return`
-    <!DOCTYPE html>
+// Generation of HTML Page
+const generateTeamPage = function (employeeCards) {
+return`
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Profile</title>
-    ${employeeCards}
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRe3js3W69CrMinNGtLdWyYrnnKzHR26vu4tDT5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href=".style/css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <span class="navbar-brand mb-0 h1 w-100 textcenter" id="navbar-text">The Devs</span>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center" id="team-cards">
+                ${employeeCards}
+            </div>
+        </div>
+    </main>
+</body>            
+</html>
+`;
+}
 
-    `;
-};
-module.exports = generateHTML;
+module.exports = generateHTML
