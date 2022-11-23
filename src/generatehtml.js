@@ -57,8 +57,9 @@ const generateIntern = function (intern) {
     `;
 };
 
+pageArray = [];
+
 generateHTML = (data) => {
-    pageArray = [];
 
     for (let i = 0; i < data.length; i++) {
         const employee = data[i];
@@ -84,10 +85,10 @@ generateHTML = (data) => {
 
 const employeeCards = pageArray.join('')
 
-const generateGroup = generateTP(employeeCards);
+const generateGroup = generateTeampage(employeeCards);
 return generateGroup;
 
-const generateTP = function (employeeCards) {
+const generateTeampage = function (employeeCards) {
     return`
     <!DOCTYPE html>
 <html lang="en">
