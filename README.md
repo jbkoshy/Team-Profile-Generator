@@ -44,4 +44,4 @@ THEN I exit the application, and the HTML is generated
 
 ## Link to video
 [Video Link](https://drive.google.com/file/d/1kzAJcm81GlR4hULcBx67pVDHDDfn_2EQ/view)
-https://youtu.be/vMDx88nEo4A
+
