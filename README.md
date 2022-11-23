@@ -40,6 +40,7 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
+```
 
 ## Link to video
 (Video Link)[https://drive.google.com/file/d/1kzAJcm81GlR4hULcBx67pVDHDDfn_2EQ/view]
